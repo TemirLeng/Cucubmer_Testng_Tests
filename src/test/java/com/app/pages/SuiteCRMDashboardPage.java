@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 public class SuiteCRMDashboardPage {
 	private WebDriver driver;
 
-	public SuiteCRMDashboardPage() {
+	public SuiteCRMDashboardPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
@@ -35,7 +35,7 @@ public class SuiteCRMDashboardPage {
 	@FindBy(linkText = "ALL")
 	WebElement all;
 
-	@FindBy(xpath = "//input[contains(@title,'Post Status Update for']")
+	@FindBy(xpath = "//input[contains(@title,'Post Status Update for')]")
 	WebElement postField;
 
 	@FindBy(xpath = "//div[@class='dashletNonTable']//input[@value='Post']")
@@ -49,12 +49,12 @@ public class SuiteCRMDashboardPage {
 	@FindBy(css = ".dropdown-toggle.user-menu-button")
 	WebElement userDropDown;
 	
-	@FindBy(id = "logout_link")
+	@FindBy(xpath = "//button[@class='dropdown-toggle user-menu-button']//following-sibling::ul//a[.='Logout']")
 	WebElement logoutLink;
 
 	public void hoverOverUserToLogout() {
 		Actions action = new Actions(driver);
-		action.moveToElement(userDropDown).perform();
+		action.moveToElement(userDropDown).click().perform();
 		logoutLink.click();
 	}
 }

@@ -16,7 +16,7 @@ public class SuiteCRMTest_stepDefs {
 	WebDriver driver = GenericMethods.setup();
 	
 	SuiteCRMLoginPage loginPage=new SuiteCRMLoginPage(driver);
-	SuiteCRMDashboardPage dashboardPage=new SuiteCRMDashboardPage();
+	SuiteCRMDashboardPage dashboardPage=new SuiteCRMDashboardPage(driver);
 	
 	
 	@Given("^I logged into suiteCRM$")

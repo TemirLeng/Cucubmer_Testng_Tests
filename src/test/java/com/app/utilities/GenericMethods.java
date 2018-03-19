@@ -15,6 +15,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class GenericMethods {
 	private static WebDriver driver;
 
@@ -24,8 +26,9 @@ public class GenericMethods {
 
 	public static WebDriver setup() {
 		if (driver == null || ((RemoteWebDriver) driver).getSessionId() == null) {
-		System.setProperty("webdriver.chrome.driver",
-				"\\C:\\Users\\Nurkulov\\Documents\\selenuim dependencies\\drivers\\chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver",
+//				"\\C:\\Users\\Nurkulov\\Documents\\selenuim dependencies\\drivers\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
