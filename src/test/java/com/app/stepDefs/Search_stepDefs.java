@@ -10,7 +10,8 @@ public class Search_stepDefs {
 	@Then("^I search for \"([^\"]*)\"$")
 	public void i_search_for(String arg1) {
 		
-		search.searchButtonClick(Config.getPropValue("name")+" "+Config.getPropValue("lastName"));
+//		search.searchButtonClick(Config.getPropValue("name")+" "+Config.getPropValue("lastName"));
+		search.searchButtonClick(arg1);
 		
 	}
 

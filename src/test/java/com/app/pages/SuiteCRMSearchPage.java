@@ -1,12 +1,13 @@
 package com.app.pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.app.utilities.Config;
 import com.app.utilities.GenericMethods;
 
 public class SuiteCRMSearchPage {
@@ -31,6 +32,12 @@ public class SuiteCRMSearchPage {
 	
 	public void searchButtonClick(String name) {
 		searchbutton.click();
+//		try {
+//			Thread.sleep(2000);
+//		}catch(Exception e) {
+//			e.getMessage();
+//		}
+		searchBox.clear();
 		searchBox.sendKeys(name+Keys.ENTER);
 	}
 	

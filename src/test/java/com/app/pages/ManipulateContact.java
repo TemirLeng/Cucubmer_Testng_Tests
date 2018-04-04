@@ -1,6 +1,7 @@
 package com.app.pages;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,9 +35,13 @@ public class ManipulateContact {
 	@FindBy(xpath = "//input[@title='Save']")
 	WebElement secondSaveButton;
 
+	
+	JavascriptExecutor js;
 	public void saveSave() {
 		saveButton.click();
 		secondSaveButton.click();
+		js=(JavascriptExecutor)driver;
+		js.executeScript("window.scrollTo(1900,0);");
 	}
 
 	@FindBy(css = "#merge_duplicate_button")

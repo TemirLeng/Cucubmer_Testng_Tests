@@ -2,15 +2,23 @@ package com.app.runners;
 
 
 import cucumber.api.CucumberOptions;
+import cucumber.api.SnippetType;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions( 
-		plugin="html:target/cucumber12",
+		snippets = SnippetType.CAMELCASE,
+		plugin= {
+				"pretty",
+				"html:target/cucumber12",
+				"json:target/cucumber.json"
+//		 plugin = {"pretty", "html:target/cucumber-html-report","json:cucumber.json"},
+		},
+		monochrome = true,
 		features="src/test/resources/features",
 		glue="com/app/stepDefs",
-		tags="@Manip",
-		dryRun=false
-)
+		tags="@cash",
+		dryRun=true
+		)
 
 public class CukesRunner extends AbstractTestNGCucumberTests{
 }

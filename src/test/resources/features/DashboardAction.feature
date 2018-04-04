@@ -1,5 +1,5 @@
 Feature: Dashboard Note
-@regression
+@regr
 Scenario: Post a note on Dashboard
 Given I logged into suiteCRM
 When I post "Hello Everyone by Chicago Beasts"

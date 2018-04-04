@@ -150,7 +150,8 @@ public class GenericMethods {
 		if (driver == null || ((RemoteWebDriver) driver).getSessionId() == null) {
 		switch (driverType) {
 		case "chrome":
-			System.setProperty("webdriver.chrome.driver", Config.getPropValue("chromePath"));
+			WebDriverManager.chromedriver().setup();
+//			System.setProperty("webdriver.chrome.driver", Config.getPropValue("chromePath"));
 			driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
@@ -158,7 +159,8 @@ public class GenericMethods {
 			break;
 
 		case "firefox":
-			System.setProperty("webdriver.gecko.driver", Config.getPropValue("ffPath"));
+			WebDriverManager.firefoxdriver().setup();
+//			System.setProperty("webdriver.gecko.driver", Config.getPropValue("ffPath"));
 			driver = new FirefoxDriver();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
@@ -166,7 +168,8 @@ public class GenericMethods {
 			break;
 
 		case "ie":
-			System.setProperty("webdriver.ie.driver", Config.getPropValue("iePath"));
+			WebDriverManager.iedriver().setup();
+//			System.setProperty("webdriver.ie.driver", Config.getPropValue("iePath"));
 			driver = new InternetExplorerDriver();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
@@ -174,7 +177,8 @@ public class GenericMethods {
 			break;
 
 		default:
-			System.setProperty("webdriver.chrome.driver", Config.getPropValue("chromePath"));
+			WebDriverManager.chromedriver().setup();
+//			System.setProperty("webdriver.chrome.driver", Config.getPropValue("chromePath"));
 			driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.manage().window().maximize();

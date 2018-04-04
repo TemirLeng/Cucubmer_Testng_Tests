@@ -23,7 +23,7 @@ public class SuiteCRMTest_stepDefs {
 	public void i_logged_into_suiteCRM() {
 		driver.get(Config.getPropValue("url"));
 		sleep(3);
-		loginPage.loginMeth("ninja","abc123");
+		loginPage.loginMeth();
 		}
 
 	@Then("^CRM name should be SuiteCRM$")

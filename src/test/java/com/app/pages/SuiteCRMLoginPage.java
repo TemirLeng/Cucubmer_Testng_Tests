@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.app.utilities.Config;
+
 public class SuiteCRMLoginPage {
 	WebDriver driver;
 
@@ -22,9 +24,9 @@ public class SuiteCRMLoginPage {
 	@FindBy(name = "Login")
 	WebElement login;
 	
-	public void loginMeth(String userName, String passWord) {
-		username.sendKeys(userName);
-		password.sendKeys(passWord);
+	public void loginMeth() {
+		username.sendKeys(Config.getPropValue("username"));
+		password.sendKeys(Config.getPropValue("password"));
 		login.click();
 	}
 }

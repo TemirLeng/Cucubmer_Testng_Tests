@@ -13,7 +13,7 @@ public class SuiteCRMContactInfo {
 	WebDriver driver;
 	
 	public SuiteCRMContactInfo() {
-		driver=GenericMethods.setup();
+		driver=GenericMethods.setupBrowser("firefox");
 		PageFactory.initElements(driver, this);
 		
 	}
