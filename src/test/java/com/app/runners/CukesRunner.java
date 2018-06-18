@@ -1,6 +1,9 @@
 package com.app.runners;
 
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
@@ -14,11 +17,23 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 //		 plugin = {"pretty", "html:target/cucumber-html-report","json:cucumber.json"},
 		},
 		monochrome = true,
-		features="src/test/resources/features",
+		features="./src/test/resources/features",
 		glue="com/app/stepDefs",
-		tags="@cash",
+		tags="@tweet",
 		dryRun=true
+	
 		)
 
 public class CukesRunner extends AbstractTestNGCucumberTests{
+	
+//	@BeforeClass
+//	public void setup() {
+//		
+//	}
+//	
+//	@AfterClass
+//	public void tearDown() {
+//		
+//	}
+	
 }

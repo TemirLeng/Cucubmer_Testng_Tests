@@ -1,11 +1,11 @@
 package com.app.utilities;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,8 +26,6 @@ public class GenericMethods {
 
 	public static WebDriver setup() {
 		if (driver == null || ((RemoteWebDriver) driver).getSessionId() == null) {
-//		System.setProperty("webdriver.chrome.driver",
-//				"\\C:\\Users\\Nurkulov\\Documents\\selenuim dependencies\\drivers\\chromedriver.exe");
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -42,6 +40,11 @@ public class GenericMethods {
 		}
 	}
 
+	public static void scrollDown() {
+		JavascriptExecutor js=(JavascriptExecutor)GenericMethods.setup();
+		js.executeScript("window.scrollBy(0,500);");
+		js.executeScript("window.scrollBy(0,1900);");
+	}
 	public WebElement getElement(String type, String locator) {
 		type = type.toLowerCase();
 		if (type.equals("id")) {

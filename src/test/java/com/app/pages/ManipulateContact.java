@@ -27,6 +27,8 @@ public class ManipulateContact {
 	public void actionDupblicateButtonClick() {
 		actionsButton.click();
 		duplicateButton.click();
+		
+		
 	}
 
 	@FindBy(xpath = "//table[@class='dcQuickEdit']//input[@id='SAVE']")

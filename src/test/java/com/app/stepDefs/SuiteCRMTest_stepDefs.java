@@ -22,7 +22,6 @@ public class SuiteCRMTest_stepDefs {
 	@Given("^I logged into suiteCRM$")
 	public void i_logged_into_suiteCRM() {
 		driver.get(Config.getPropValue("url"));
-		sleep(3);
 		loginPage.loginMeth();
 		}
 
