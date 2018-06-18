@@ -1,0 +1,7 @@
+<suite name="regression test">
+<test name="Regression test1">
+	<classes>
+		<class name="com.app.runners.ResgressionRunnner"></class>
+	</classes>
+</test>
+</suite>

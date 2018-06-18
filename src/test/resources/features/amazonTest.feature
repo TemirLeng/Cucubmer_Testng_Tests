@@ -1,3 +1,4 @@
+#language=no
 @smoke
 Feature: Amazon home page
 

@@ -1,3 +1,4 @@
+#language: no
 Feature: Search for Doe
 
 @get

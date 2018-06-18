@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[<div "result">user establishes a database connection using JDBC (PASSED : 1s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">user sends a &quot;insert into mountain values(1,&#x27;My mountain&#x27;,8611)&quot; to DB (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">new data should be updated in DB (PASSED : 0s)</div>]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2210" started-at="2018-05-31T21:17:11Z" finished-at="2018-05-31T21:17:13Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.app.runners.CukesRunnerData@2d928643]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="2210" started-at="2018-05-31T21:17:11Z" finished-at="2018-05-31T21:17:13Z">
+      <class name="com.app.runners.CukesRunnerData">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.app.runners.CukesRunnerData@2d928643]" name="setUpClass" is-config="true" duration-ms="570" started-at="2018-05-31T16:17:11Z" finished-at="2018-05-31T16:17:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.app.runners.CukesRunnerData@2d928643]" name="runScenario" duration-ms="1472" started-at="2018-05-31T16:17:11Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2018-05-31T16:17:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Send an Update query"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Update a table in the database"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<div "result">user establishes a database connection using JDBC (PASSED : 1s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">user sends a &quot;insert into mountain values(1,&#x27;My mountain&#x27;,8611)&quot; to DB (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">new data should be updated in DB (PASSED : 0s)</div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.app.runners.CukesRunnerData@2d928643]" name="tearDownClass" is-config="true" duration-ms="19" started-at="2018-05-31T16:17:13Z" finished-at="2018-05-31T16:17:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="quite()[pri:0, instance:com.app.runners.CukesRunnerData@2d928643]" name="quite" is-config="true" duration-ms="0" started-at="2018-05-31T16:17:13Z" finished-at="2018-05-31T16:17:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quite -->
+      </class> <!-- com.app.runners.CukesRunnerData -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
